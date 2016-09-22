@@ -1,0 +1,33 @@
+<!--ЗАДАНИЕ:
+Here is a quick exercise that will help me evaluate the team’s skills
+
+Once it is complete, please have the developers add their project to github.com where I can browse the code.
+
+Here's what I would suggest:
+1. Write a simple angular app that displays the weather from openweathermap.org
+2. Provide a simple text field that could take a city name and then display the current weather.
+3. Must use a controller and service and comment about how you segregate the functionality between them.
+4. Render the weather with a custom directive showing current temperature, humidity, and description.
+-->
+<!doctype html>
+<html ng-app="weatherApp">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Погода</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="http://allfont.ru/allfont.css?fonts=roboto-regular" rel="stylesheet" type="text/css" />
+    <script src="js/lib/angular.min.js"></script>
+</head>
+
+<body class="frame">
+    <h4><img src="img/bird.jpg" align="left" hspace="10" />Я покажу погоду для Вашего города</h4>
+    <div ng-controller="weatherController">
+        Введите город: <input type="text" ng-model="town" /> <!--В соответствии с заданием (п.2)-->
+        <input type="button" value="Найти" ng-click="printInfo()" /><br /><br /><hr /><br />
+        <div ng-show="load" weather-Dir></div> <!--Блок становится видимым после клика по кнопке и отображает инфоррмацию в ответ на запрос-->
+    </div>
+    <script src="js/weatherApp.js"></script> <!--Код приложения-->
+</body>
+
+</html>

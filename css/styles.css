@@ -1,0 +1,10 @@
+﻿.frame {
+	font-family: 'Roboto Regular', arial;
+	width: 460px;
+	border: 2px solid red;
+	padding: 10px;
+}
+
+.fig {
+	text-align: center;
+}
